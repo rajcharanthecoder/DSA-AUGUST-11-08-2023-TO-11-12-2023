@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+void ReplaceCharacters(std::string& str, char ch1, char ch2) {
+    for (char& c : str) {
+        if (c == ch1) {
+            c = ch2;
+        } else if (c == ch2) {
+            c = ch1;
+        }
+    }
+}
+
+int main() {
+    std::string str = "tervpro";
+    char ch1 = 'e';
+    char ch2 = 'p';
+
+    ReplaceCharacters(str, ch1, ch2);
+
+    std::cout << "Output: " << str << std::endl;
+
+    return 0;
+}
